@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隱私政策 — 50計畫</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canvas:#F7F6F3; --surface:#FFFFFF; --ink:#1A1A18; --muted:#6B6A65;
+    --faint:#9A9892; --rule:#DEDCD6; --accent:#346538;
+    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Noto Sans TC",sans-serif;
+    --serif:"Instrument Serif",Georgia,"Songti TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --canvas:#131311; --surface:#1B1B18; --ink:#EDEBE5; --muted:#9C9A93;
+      --faint:#6E6C66; --rule:#302F2B; --accent:#7FAE84;
+    }
+  }
+  :root[data-theme="dark"]{
+    --canvas:#131311; --surface:#1B1B18; --ink:#EDEBE5; --muted:#9C9A93;
+    --faint:#6E6C66; --rule:#302F2B; --accent:#7FAE84;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--canvas); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.75;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:44rem; margin:0 auto; padding:5rem 1.5rem 7rem}
+  header{margin-bottom:4rem}
+  .eyebrow{
+    font-family:var(--mono); font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--faint); margin:0 0 1.25rem
+  }
+  h1{
+    font-family:var(--serif); font-weight:400; font-size:clamp(2.4rem,7vw,3.4rem);
+    line-height:1.12; letter-spacing:-.01em; margin:0 0 1.25rem
+  }
+  .lede{color:var(--muted); margin:0; font-size:1.0625rem}
+  .stamp{
+    font-family:var(--mono); font-size:12px; color:var(--faint);
+    margin-top:2rem; padding-top:1.25rem; border-top:1px solid var(--rule)
+  }
+  h2{
+    font-family:var(--serif); font-weight:400; font-size:1.75rem; line-height:1.25;
+    letter-spacing:-.01em; margin:3.5rem 0 .25rem
+  }
+  h2 + .sub{color:var(--faint); font-size:.9375rem; margin:0 0 1.25rem}
+  h3{font-size:1rem; font-weight:600; margin:2rem 0 .5rem}
+  p{margin:0 0 1.125rem}
+  ul{margin:0 0 1.125rem; padding-left:1.25rem}
+  li{margin-bottom:.5rem}
+  li::marker{color:var(--faint)}
+  strong{font-weight:600}
+  a{color:var(--accent); text-decoration:underline; text-underline-offset:.2em}
+  code{font-family:var(--mono); font-size:.875em; color:var(--muted)}
+  .card{
+    background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+    padding:1.5rem 1.75rem; margin:1.5rem 0
+  }
+  .card p:last-child{margin-bottom:0}
+  .tablewrap{overflow-x:auto; margin:1.5rem 0}
+  table{border-collapse:collapse; width:100%; min-width:30rem; font-size:.9375rem}
+  th,td{text-align:left; padding:.85rem 1rem .85rem 0; border-bottom:1px solid var(--rule); vertical-align:top}
+  th{
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--faint); font-weight:400; border-bottom-color:var(--ink)
+  }
+  td:first-child{font-weight:600; white-space:nowrap; padding-right:2rem}
+  .contact{font-family:var(--mono); font-size:1rem}
+  .lang{display:flex; gap:.5rem; margin-bottom:2.5rem}
+  .lang button{
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); background:transparent; border:1px solid var(--rule);
+    border-radius:999px; padding:.4rem 1rem; cursor:pointer; line-height:1.6
+  }
+  .lang button[aria-pressed="true"]{color:var(--accent); border-color:var(--accent)}
+  [lang="en"] h2, [lang="en"] h1{letter-spacing:-.02em}
+  [hidden]{display:none !important}
+  footer{
+    margin-top:5rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+    font-family:var(--mono); font-size:12px; color:var(--faint)
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="lang">
+  <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+  <button type="button" data-lang="en" aria-pressed="false">English</button>
+</div>
+
+<section id="zh">
+<header>
+  <p class="eyebrow">50計畫 · Project 50</p>
+  <h1>隱私政策</h1>
+  <p class="lede">這個 app 的設計前提是：你的紀錄放在你的手機上。除非你自己開啟雲端同步，否則它不會離開這台裝置。</p>
+  <p class="stamp">生效日 2026-08-29 · 版本 1.0</p>
+</header>
+
+<h2>一、簡短版</h2>
+<div class="card">
+  <p><strong>不開同步</strong>：你的挑戰、習慣、打卡與筆記只存在手機裡，我們看不到，也沒有伺服器存著它。</p>
+  <p><strong>開了同步</strong>：這些內容會加密傳輸到我們在日本東京的資料庫，只有你登入後才讀得到。</p>
+  <p><strong>另外還有</strong>：一組匿名的使用統計，用來知道有多少人走到付費那一步。它不含你的帳號、也不含任何你寫下的內容。</p>
+  <p><strong>我們不做</strong>：不販售你的資料、不提供給廣告商、沒有廣告識別碼（IDFA）、不跨 app 追蹤你。</p>
+</div>
+
+<h2>二、留在你手機裡的資料</h2>
+<p class="sub">預設情況下，以下全部只存在本機資料庫，不會上傳。</p>
+<ul>
+  <li>挑戰設定：名稱、天數、起始日、連續中斷時怎麼算</li>
+  <li>你的習慣：名稱、目標、單位、順序</li>
+  <li>每日打卡紀錄與每日筆記</li>
+  <li>提醒時間、解鎖狀態、以及已用掉免費額度的日期</li>
+</ul>
+<p>把 app 從手機刪除，這些資料就一起消失。如果你沒有開過同步，那就沒有任何副本存在別的地方——請自行留意。</p>
+
+<h2>三、雲端同步（選用）</h2>
+<p class="sub">只有在你解鎖並登入之後才會啟用。未登入的使用者不會有任何一列資料進到我們的資料庫。</p>
+
+<h3>會上傳什麼</h3>
+<p>就是上一節列的挑戰、習慣、打卡與每日筆記，加上一個代表「這是你」的帳號識別碼。</p>
+
+<h3>帳號怎麼來的</h3>
+<p>你可以用 Apple 或 Google 登入。我們從中取得的是<strong>電子郵件地址</strong>與一組帳號識別碼。我們<strong>拿不到、也不曾經手你的密碼</strong>——驗證全程由 Apple 或 Google 完成。</p>
+<p>使用 Apple 登入時，你可以選擇「隱藏我的電子郵件」，我們就只會看到 Apple 產生的轉寄地址。</p>
+
+<h3>存在哪裡</h3>
+<div class="tablewrap">
+<table>
+  <tr><th>項目</th><th>說明</th></tr>
+  <tr><td>服務商</td><td>Supabase（資料庫與帳號驗證）</td></tr>
+  <tr><td>實體位置</td><td>日本東京，AWS <code>ap-northeast-1</code></td></tr>
+  <tr><td>傳輸</td><td>全程 HTTPS 加密</td></tr>
+  <tr><td>存取控制</td><td>資料庫層的 Row Level Security：每一列都綁定帳號，你只讀得到自己的</td></tr>
+</table>
+</div>
+<p>你的資料會離開台灣。這是使用這項服務的必要條件，開啟同步即表示你同意這件事。</p>
+
+<h2>四、匿名使用統計</h2>
+<p class="sub">用來回答一個問題：有多少人走到付費那一步。沒有它，我們只能用猜的。</p>
+<p>app 會在四個時間點各送出一筆事件：完成初始設定、每次打卡、看到解鎖畫面、完成購買。每筆包含：</p>
+<ul>
+  <li>一組隨機產生的裝置識別碼——由 app 自己產生，<strong>不是 IDFA</strong>，不會跨 app 使用，刪除 app 即永久消失</li>
+  <li>事件名稱與時間</li>
+  <li>打卡事件另含兩個數字：已用掉幾格免費額度、目前是挑戰第幾天</li>
+</ul>
+<p>這裡面<strong>沒有</strong>你的帳號、電子郵件、習慣名稱，也沒有任何一個字的筆記內容。這份資料只寫得進去、讀不出來——app 使用的金鑰在資料庫層被明確拿掉了讀取權限。</p>
+<p>因為它完全匿名、無從對應到特定個人，所以刪除帳號時<strong>不會</strong>一併刪除這些事件。</p>
+<p>由於不涉及廣告識別碼、也不跨 app 追蹤，本 app 不需要、也不會顯示 iOS 的追蹤許可（ATT）詢問。</p>
+
+<h2>五、提醒通知</h2>
+<p>每日提醒是<strong>由你的手機自己排程</strong>的本機通知。我們沒有推播伺服器，也不會取得或上傳任何推播權杖。你把提醒設在幾點，這件事我們並不知道。</p>
+
+<h2>六、購買</h2>
+<p>解鎖是一次性的 App 內購買，付款全程由 Apple 處理。我們<strong>不會收到、也無法查看</strong>你的付款方式、信用卡號或帳單資訊。</p>
+<p>app 只會向 App Store 詢問「這個 Apple ID 是否買過這個項目」，並把答案存在本機。</p>
+
+<h2>七、App 更新</h2>
+<p>app 會向 Expo（EAS Update）檢查是否有新版本。這個過程中，Expo 會取得你的 IP 位址與裝置／版本等技術資訊，這是所有網路請求都無法避免的。更新檢查<strong>不會</strong>夾帶你的任何個人資料或打卡內容。</p>
+
+<h2>八、我們不做的事</h2>
+<ul>
+  <li>不販售、不出租、不交換你的個人資料</li>
+  <li>不提供給廣告商或資料仲介</li>
+  <li>不使用廣告識別碼，不做跨 app 或跨網站追蹤</li>
+  <li>不接第三方分析 SDK</li>
+  <li>不讀取你的通訊錄、相簿、位置或健康資料——app 根本不會要求這些權限</li>
+</ul>
+<p>唯一的例外是法律要求：若我們收到具有法律效力的正式要求，可能必須揭露相關資料。</p>
+
+<h2>九、保存與刪除</h2>
+<h3>你可以隨時刪掉全部</h3>
+<p>在 app 中前往 <strong>設定 → 刪除帳號與雲端資料</strong>。這會立即且永久地刪除雲端上你的所有挑戰、習慣、打卡、每日筆記，以及帳號本身。這個動作無法復原，我們沒有備份可以還原給你。</p>
+<h3>保存期間</h3>
+<p>只要你的帳號存在，同步的資料就會一直保留——這正是同步的用途。你刪除帳號，資料就跟著消失。</p>
+<h3>本機資料</h3>
+<p>把 app 從手機刪除即可清除。這個動作不會影響雲端資料，若你也要刪除雲端資料，請先在 app 內執行上面的刪除帳號。</p>
+
+<h2>十、你的權利</h2>
+<p>依照台灣《個人資料保護法》，你可以要求查詢、閱覽、複製、補充、更正你的個人資料，或請求停止蒐集、處理、利用及刪除。</p>
+<p>實務上最快的方式是直接在 app 裡操作：你的資料本來就完整顯示在畫面上，刪除也只需要一個按鈕。若需要以其他形式提供，請透過下方聯絡方式與我們聯繫。</p>
+
+<h2>十一、兒童</h2>
+<p>本 app 並非針對 13 歲以下兒童設計，也不會刻意蒐集兒童的個人資料。</p>
+
+<h2>十二、政策變更</h2>
+<p>本政策如有修改，會更新頁面頂端的生效日期。若涉及重大變更，我們會在 app 內另行告知。</p>
+
+<h2>十三、聯絡我們</h2>
+<p>對本政策或你的資料有任何疑問，歡迎來信：</p>
+<p class="contact"><a href="mailto:andyt106667@gmail.com">andyt106667@gmail.com</a></p>
+
+<footer>
+  50計畫 · Project 50 — 隱私政策 v1.0 · 2026-08-29
+</footer>
+</section>
+
+<section id="en" lang="en" hidden>
+<header>
+  <p class="eyebrow">50計畫 · Project 50</p>
+  <h1>Privacy Policy</h1>
+  <p class="lede">This app is built on one premise: your records live on your phone. Unless you turn on cloud sync yourself, they never leave the device.</p>
+  <p class="stamp">Effective 2026-08-29 · Version 1.0</p>
+</header>
+
+<h2>1. The short version</h2>
+<div class="card">
+  <p><strong>Sync off</strong>: your challenges, habits, check-ins and notes exist only on your phone. We cannot see them, and no server holds a copy.</p>
+  <p><strong>Sync on</strong>: that content is transmitted, encrypted, to our database in Tokyo, Japan. Only you, signed in, can read it.</p>
+  <p><strong>Also</strong>: a set of anonymous usage events, so we can tell how many people reach the paywall. They contain neither your account nor anything you wrote.</p>
+  <p><strong>What we don't do</strong>: we don't sell your data, don't hand it to advertisers, don't use an advertising identifier (IDFA), and don't track you across apps.</p>
+</div>
+
+<h2>2. Data that stays on your phone</h2>
+<p class="sub">By default, all of the following lives only in the local database and is never uploaded.</p>
+<ul>
+  <li>Challenge settings: name, length, start date, how a broken streak is counted</li>
+  <li>Your habits: name, target, unit, order</li>
+  <li>Daily check-ins and daily notes</li>
+  <li>Reminder time, unlock status, and which dates used up your free allowance</li>
+</ul>
+<p>Delete the app and this data goes with it. If you never turned sync on, no copy exists anywhere else — please keep that in mind.</p>
+
+<h2>3. Cloud sync (optional)</h2>
+<p class="sub">Active only after you unlock and sign in. Not a single row from a signed-out user reaches our database.</p>
+
+<h3>What gets uploaded</h3>
+<p>Exactly what is listed in the previous section — challenges, habits, check-ins and daily notes — plus an identifier that says "this is you".</p>
+
+<h3>Where the account comes from</h3>
+<p>You can sign in with Apple or Google. What we receive is your <strong>email address</strong> and an account identifier. We <strong>never receive or handle your password</strong>; authentication happens entirely with Apple or Google.</p>
+<p>With Sign in with Apple you may choose "Hide My Email", in which case we only ever see the relay address Apple generates.</p>
+
+<h3>Where it is stored</h3>
+<div class="tablewrap">
+<table>
+  <tr><th>Item</th><th>Detail</th></tr>
+  <tr><td>Provider</td><td>Supabase (database and authentication)</td></tr>
+  <tr><td>Location</td><td>Tokyo, Japan — AWS <code>ap-northeast-1</code></td></tr>
+  <tr><td>Transport</td><td>HTTPS, encrypted end to end</td></tr>
+  <tr><td>Access control</td><td>Row Level Security in the database: every row is bound to an account, and you can only read your own</td></tr>
+</table>
+</div>
+<p>Your data leaves Taiwan. That is inherent to using this service; turning on sync means you accept it.</p>
+
+<h2>4. Anonymous usage events</h2>
+<p class="sub">They answer one question: how many people reach the point of paying. Without them we would be guessing.</p>
+<p>The app sends one event at four moments: finishing setup, each check-in, seeing the unlock screen, and completing a purchase. Each contains:</p>
+<ul>
+  <li>A randomly generated device identifier — created by the app itself, <strong>not the IDFA</strong>, never used across apps, and gone for good when you delete the app</li>
+  <li>The event name and a timestamp</li>
+  <li>Check-in events also carry two numbers: how much of the free allowance is used, and which day of the challenge it is</li>
+</ul>
+<p>There is <strong>no</strong> account, no email address, no habit name, and not one word of your notes in any of this. The data can only be written, never read back — the key the app uses has had read access explicitly revoked at the database level.</p>
+<p>Because these events are fully anonymous and cannot be tied to any individual, deleting your account does <strong>not</strong> delete them.</p>
+<p>Since no advertising identifier is involved and there is no cross-app tracking, this app does not need — and will never show — the iOS App Tracking Transparency prompt.</p>
+
+<h2>5. Reminders</h2>
+<p>The daily reminder is a local notification <strong>scheduled by your own phone</strong>. We run no push server and never obtain or upload a push token. The time you set your reminder to is not something we know.</p>
+
+<h2>6. Purchases</h2>
+<p>Unlocking is a one-time in-app purchase handled entirely by Apple. We <strong>never receive and cannot see</strong> your payment method, card number, or billing details.</p>
+<p>The app only asks the App Store whether this Apple ID has bought this item, and stores the answer locally.</p>
+
+<h2>7. App updates</h2>
+<p>The app checks Expo (EAS Update) for new versions. In doing so, Expo receives your IP address and technical details such as device and version — unavoidable for any network request. Update checks carry <strong>none</strong> of your personal data or check-in content.</p>
+
+<h2>8. What we don't do</h2>
+<ul>
+  <li>We don't sell, rent, or trade your personal data</li>
+  <li>We don't share it with advertisers or data brokers</li>
+  <li>We use no advertising identifier and do no cross-app or cross-site tracking</li>
+  <li>We embed no third-party analytics SDK</li>
+  <li>We don't read your contacts, photos, location, or health data — the app never requests those permissions</li>
+</ul>
+<p>The one exception is the law: if we receive a legally valid demand, we may be required to disclose relevant data.</p>
+
+<h2>9. Retention and deletion</h2>
+<h3>You can delete everything at any time</h3>
+<p>In the app, go to <strong>Settings → Delete account and cloud data</strong>. This immediately and permanently deletes all your challenges, habits, check-ins and daily notes from the cloud, along with the account itself. It cannot be undone; we hold no backup to restore for you.</p>
+<h3>Retention period</h3>
+<p>As long as your account exists, synced data is kept — that is the point of sync. Delete the account and the data goes with it.</p>
+<h3>Local data</h3>
+<p>Deleting the app from your phone clears it. That does not touch cloud data; to remove that too, run the account deletion above first.</p>
+
+<h2>10. Your rights</h2>
+<p>Under Taiwan's Personal Data Protection Act — and, where they apply to you, equivalent rights under laws such as the GDPR — you may request access to, a copy of, correction of, or deletion of your personal data, and may ask us to stop collecting, processing, or using it.</p>
+<p>In practice the fastest route is the app itself: your data is already shown to you in full on screen, and deleting it takes one button. If you need it in another form, contact us below.</p>
+
+<h2>11. Children</h2>
+<p>This app is not designed for children under 13, and we do not knowingly collect personal data from children.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>If this policy changes, the effective date at the top of the page is updated. For material changes we will also say so inside the app.</p>
+
+<h2>13. Contact</h2>
+<p>Questions about this policy or your data are welcome:</p>
+<p class="contact"><a href="mailto:andyt106667@gmail.com">andyt106667@gmail.com</a></p>
+
+<footer>
+  50計畫 · Project 50 — Privacy Policy v1.0 · 2026-08-29 · The Chinese version prevails in case of discrepancy.
+</footer>
+</section>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.lang button');
+    var sections = { zh: document.getElementById('zh'), en: document.getElementById('en') };
+    function show(lang) {
+      sections.zh.hidden = lang !== 'zh';
+      sections.en.hidden = lang !== 'en';
+      document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant';
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+      });
+      document.title = lang === 'en' ? 'Privacy Policy — Project 50' : '隱私政策 — 50計畫';
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { show(b.dataset.lang); });
+    });
+    // 系統語言不是中文的人（含審核員）直接看到英文，不用自己找切換鈕
+    if (!/^zh/i.test(navigator.language || '')) show('en');
+  })();
+</script>
+
+</div>
+</body>
+</html>
