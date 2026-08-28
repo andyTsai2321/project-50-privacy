@@ -107,7 +107,7 @@
 <h2>一、簡短版</h2>
 <div class="card">
   <p><strong>不開同步</strong>：你的挑戰、習慣、打卡與筆記只存在手機裡，我們看不到，也沒有伺服器存著它。</p>
-  <p><strong>開了同步</strong>：這些內容會加密傳輸到我們在日本東京的資料庫，只有你登入後才讀得到。</p>
+  <p><strong>開了同步</strong>：這些內容會加密傳輸到我們位於日本的資料庫，只有你登入後才讀得到。</p>
   <p><strong>另外還有</strong>：一組匿名的使用統計，用來知道有多少人走到付費那一步。它不含你的帳號、也不含任何你寫下的內容。</p>
   <p><strong>我們不做</strong>：不販售你的資料、不提供給廣告商、沒有廣告識別碼（IDFA）、不跨 app 追蹤你。</p>
 </div>
@@ -137,9 +137,9 @@
 <table>
   <tr><th>項目</th><th>說明</th></tr>
   <tr><td>服務商</td><td>Supabase（資料庫與帳號驗證）</td></tr>
-  <tr><td>實體位置</td><td>日本東京，AWS <code>ap-northeast-1</code></td></tr>
+  <tr><td>存放地點</td><td>日本</td></tr>
   <tr><td>傳輸</td><td>全程 HTTPS 加密</td></tr>
-  <tr><td>存取控制</td><td>資料庫層的 Row Level Security：每一列都綁定帳號，你只讀得到自己的</td></tr>
+  <tr><td>存取控制</td><td>每一列資料都綁定你的帳號，其他使用者讀不到</td></tr>
 </table>
 </div>
 <p>你的資料會離開台灣。這是使用這項服務的必要條件，開啟同步即表示你同意這件事。</p>
@@ -152,7 +152,7 @@
   <li>事件名稱與時間</li>
   <li>打卡事件另含兩個數字：已用掉幾格免費額度、目前是挑戰第幾天</li>
 </ul>
-<p>這裡面<strong>沒有</strong>你的帳號、電子郵件、習慣名稱，也沒有任何一個字的筆記內容。這份資料只寫得進去、讀不出來——app 使用的金鑰在資料庫層被明確拿掉了讀取權限。</p>
+<p>這裡面<strong>沒有</strong>你的帳號、電子郵件、習慣名稱，也沒有任何一個字的筆記內容。這份資料只寫得進去、讀不出來——app 沒有讀取它的權限。</p>
 <p>因為它完全匿名、無從對應到特定個人，所以刪除帳號時<strong>不會</strong>一併刪除這些事件。</p>
 <p>由於不涉及廣告識別碼、也不跨 app 追蹤，本 app 不需要、也不會顯示 iOS 的追蹤許可（ATT）詢問。</p>
 
@@ -214,7 +214,7 @@
 <h2>1. The short version</h2>
 <div class="card">
   <p><strong>Sync off</strong>: your challenges, habits, check-ins and notes exist only on your phone. We cannot see them, and no server holds a copy.</p>
-  <p><strong>Sync on</strong>: that content is transmitted, encrypted, to our database in Tokyo, Japan. Only you, signed in, can read it.</p>
+  <p><strong>Sync on</strong>: that content is transmitted, encrypted, to our database in Japan. Only you, signed in, can read it.</p>
   <p><strong>Also</strong>: a set of anonymous usage events, so we can tell how many people reach the paywall. They contain neither your account nor anything you wrote.</p>
   <p><strong>What we don't do</strong>: we don't sell your data, don't hand it to advertisers, don't use an advertising identifier (IDFA), and don't track you across apps.</p>
 </div>
@@ -244,9 +244,9 @@
 <table>
   <tr><th>Item</th><th>Detail</th></tr>
   <tr><td>Provider</td><td>Supabase (database and authentication)</td></tr>
-  <tr><td>Location</td><td>Tokyo, Japan — AWS <code>ap-northeast-1</code></td></tr>
+  <tr><td>Location</td><td>Japan</td></tr>
   <tr><td>Transport</td><td>HTTPS, encrypted end to end</td></tr>
-  <tr><td>Access control</td><td>Row Level Security in the database: every row is bound to an account, and you can only read your own</td></tr>
+  <tr><td>Access control</td><td>Every row is bound to your account; no other user can read it</td></tr>
 </table>
 </div>
 <p>Your data leaves Taiwan. That is inherent to using this service; turning on sync means you accept it.</p>
@@ -259,7 +259,7 @@
   <li>The event name and a timestamp</li>
   <li>Check-in events also carry two numbers: how much of the free allowance is used, and which day of the challenge it is</li>
 </ul>
-<p>There is <strong>no</strong> account, no email address, no habit name, and not one word of your notes in any of this. The data can only be written, never read back — the key the app uses has had read access explicitly revoked at the database level.</p>
+<p>There is <strong>no</strong> account, no email address, no habit name, and not one word of your notes in any of this. The data can only be written, never read back — the app has no permission to read it.</p>
 <p>Because these events are fully anonymous and cannot be tied to any individual, deleting your account does <strong>not</strong> delete them.</p>
 <p>Since no advertising identifier is involved and there is no cross-app tracking, this app does not need — and will never show — the iOS App Tracking Transparency prompt.</p>
 
