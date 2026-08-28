@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>支援 — 50計畫</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canvas:#F7F6F3; --surface:#FFFFFF; --ink:#1A1A18; --muted:#6B6A65;
+    --faint:#9A9892; --rule:#DEDCD6; --accent:#346538;
+    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Noto Sans TC",sans-serif;
+    --serif:"Instrument Serif",Georgia,"Songti TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --canvas:#131311; --surface:#1B1B18; --ink:#EDEBE5; --muted:#9C9A93;
+      --faint:#6E6C66; --rule:#302F2B; --accent:#7FAE84;
+    }
+  }
+  :root[data-theme="dark"]{
+    --canvas:#131311; --surface:#1B1B18; --ink:#EDEBE5; --muted:#9C9A93;
+    --faint:#6E6C66; --rule:#302F2B; --accent:#7FAE84;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--canvas); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.75;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:44rem; margin:0 auto; padding:5rem 1.5rem 7rem}
+  header{margin-bottom:4rem}
+  .eyebrow{
+    font-family:var(--mono); font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--faint); margin:0 0 1.25rem
+  }
+  h1{
+    font-family:var(--serif); font-weight:400; font-size:clamp(2.4rem,7vw,3.4rem);
+    line-height:1.12; letter-spacing:-.01em; margin:0 0 1.25rem
+  }
+  .lede{color:var(--muted); margin:0; font-size:1.0625rem}
+  .stamp{
+    font-family:var(--mono); font-size:12px; color:var(--faint);
+    margin-top:2rem; padding-top:1.25rem; border-top:1px solid var(--rule)
+  }
+  h2{
+    font-family:var(--serif); font-weight:400; font-size:1.75rem; line-height:1.25;
+    letter-spacing:-.01em; margin:3.5rem 0 .25rem
+  }
+  h2 + .sub{color:var(--faint); font-size:.9375rem; margin:0 0 1.25rem}
+  h3{font-size:1rem; font-weight:600; margin:2rem 0 .5rem}
+  p{margin:0 0 1.125rem}
+  ul{margin:0 0 1.125rem; padding-left:1.25rem}
+  li{margin-bottom:.5rem}
+  li::marker{color:var(--faint)}
+  strong{font-weight:600}
+  a{color:var(--accent); text-decoration:underline; text-underline-offset:.2em}
+  code{font-family:var(--mono); font-size:.875em; color:var(--muted)}
+  .card{
+    background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+    padding:1.5rem 1.75rem; margin:1.5rem 0
+  }
+  .card p:last-child{margin-bottom:0}
+  .tablewrap{overflow-x:auto; margin:1.5rem 0}
+  table{border-collapse:collapse; width:100%; min-width:30rem; font-size:.9375rem}
+  th,td{text-align:left; padding:.85rem 1rem .85rem 0; border-bottom:1px solid var(--rule); vertical-align:top}
+  th{
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--faint); font-weight:400; border-bottom-color:var(--ink)
+  }
+  td:first-child{font-weight:600; white-space:nowrap; padding-right:2rem}
+  .contact{font-family:var(--mono); font-size:1rem}
+  .who{color:var(--muted); font-size:.9375rem; margin:1.25rem 0 0}
+  .lang{display:flex; gap:.5rem; margin-bottom:2.5rem}
+  .lang button{
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); background:transparent; border:1px solid var(--rule);
+    border-radius:999px; padding:.4rem 1rem; cursor:pointer; line-height:1.6
+  }
+  .lang button[aria-pressed="true"]{color:var(--accent); border-color:var(--accent)}
+  [lang="en"] h2, [lang="en"] h1{letter-spacing:-.02em}
+  [hidden]{display:none !important}
+  footer{
+    margin-top:5rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+    font-family:var(--mono); font-size:12px; color:var(--faint)
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="lang">
+  <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+  <button type="button" data-lang="en" aria-pressed="false">English</button>
+</div>
+
+<section id="zh">
+<header>
+  <p class="eyebrow">50計畫 · Project 50</p>
+  <h1>支援</h1>
+  <p class="lede">有問題直接寫信給我，收信的是開發者本人 Andy Tsai。通常一到兩個工作天回覆。</p>
+  <p class="contact"><a href="mailto:andyt106667@gmail.com">andyt106667@gmail.com</a></p>
+</header>
+
+<h2>常見問題</h2>
+
+<h3>免費額度是怎麼算的？</h3>
+<p>算的是「你真的打過卡的不重複日期」，這台裝置終身累計 7 個，<strong>不限期限、不會過期</strong>。中斷兩週再回來，額度還在。用完之後要再打新的一天才需要解鎖——同一天補打其他習慣不會再扣。</p>
+
+<h3>不解鎖的話，我之前的紀錄會不見嗎？</h3>
+<p>不會。額度用完是「不能再打新的日期」，不是把你的紀錄鎖起來。已經記錄的打卡、筆記與統計都還看得到，每日提醒也照常發。</p>
+
+<h3>解鎖包含什麼？</h3>
+<p>一次付清的買斷，沒有訂閱：不限天數、習慣數量不再限制、雲端同步、三種額外主題（朱印、海圖、麻紙），以及未來所有功能。</p>
+
+<h3>我換手機了，怎麼把紀錄帶過去？</h3>
+<p>在舊手機的設定裡登入（Apple 或 Google），確認同步完成；新手機用同一個帳號登入，資料會自己回來。同步需要先解鎖。</p>
+
+<h3>我付過錢，換手機後變成未解鎖？</h3>
+<p>設定頁點「恢復購買」。只要用的是當初購買的同一個 Apple ID，解鎖會回來——非消耗性項目不需要重新付費。</p>
+
+<h3>半夜打卡算哪一天？</h3>
+<p>凌晨 4:00 才換日。半夜一點打的卡記在前一天，熬夜不會因為時鐘跳過 12 點就莫名其妙斷掉。</p>
+
+<h3>為什麼我完成了幾個習慣，那天還是沒算連續？</h3>
+<p>當天所有習慣都完成，這一天才算數。部分完成會留下紀錄、也會算進完成率，但不會延續連續天數。</p>
+
+<h3>提醒沒有響</h3>
+<p>提醒是手機自己排程的本機通知。請確認 iOS 設定 → 通知 → 50計畫 已允許通知，並且沒有在專注模式中被靜音。app 裡也要選一個時間，不能是「關閉」。</p>
+
+<h3>怎麼刪除帳號與雲端資料？</h3>
+<p>設定 → 刪除帳號與雲端資料。這會立即且永久刪除雲端上的所有紀錄與帳號本身，無法復原。手機上的本機資料則是刪除 app 即清除。</p>
+
+<h3>可以退費嗎？</h3>
+<p>App Store 的購買由 Apple 處理退費，我這邊沒有權限。請至 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> 提出。</p>
+
+<h2>回報問題</h2>
+<p>寫信時如果能附上 app 版本、iOS 版本，以及問題發生的步驟，會快很多。畫面截圖最有幫助。</p>
+
+<h2>隱私</h2>
+<p>資料怎麼蒐集、存在哪裡、怎麼刪除，全部寫在 <a href="./">隱私政策</a>。</p>
+
+<footer>
+  50計畫 · Project 50 — 支援 · Andy Tsai
+</footer>
+</section>
+
+<section id="en" lang="en" hidden>
+<header>
+  <p class="eyebrow">50計畫 · Project 50</p>
+  <h1>Support</h1>
+  <p class="lede">Write to me directly — the developer, Andy Tsai, reads this mailbox. Usually a reply within one or two working days.</p>
+  <p class="contact"><a href="mailto:andyt106667@gmail.com">andyt106667@gmail.com</a></p>
+</header>
+
+<h2>Common questions</h2>
+
+<h3>How is the free allowance counted?</h3>
+<p>It counts distinct dates you actually checked in on — seven of them, accumulated over the lifetime of the device, <strong>with no time limit and no expiry</strong>. Disappear for two weeks and the allowance is still there. Only a new date costs an allowance; adding more habits to a day you already used costs nothing.</p>
+
+<h3>If I don't unlock, do I lose what I recorded?</h3>
+<p>No. Running out means you cannot check in on a new date — it never locks up your records. Everything already recorded stays visible, and daily reminders keep working.</p>
+
+<h3>What does unlocking include?</h3>
+<p>A one-time purchase, no subscription: unlimited days, no cap on habits, cloud sync, three extra themes, and all future features.</p>
+
+<h3>I got a new phone — how do I bring my records over?</h3>
+<p>On the old phone, sign in under Settings (Apple or Google) and let it sync. On the new phone, sign in with the same account and your data comes back. Sync requires unlocking first.</p>
+
+<h3>I paid, but the new phone says locked</h3>
+<p>Tap "Restore purchases" in Settings. As long as it is the same Apple ID you bought with, the unlock comes back — non-consumable purchases are never charged twice.</p>
+
+<h3>Which day does a late-night check-in count as?</h3>
+<p>The day rolls over at 4:00 AM. A check-in at 1 AM counts for the previous day, so staying up late does not break your streak just because the clock passed midnight.</p>
+
+<h3>I completed some habits — why didn't the day count?</h3>
+<p>A day counts only when every habit is done. Partial progress is recorded and counts toward your completion rate, but does not extend the streak.</p>
+
+<h3>Reminders aren't firing</h3>
+<p>Reminders are local notifications scheduled by your own phone. Check iOS Settings → Notifications → 50計畫 is allowed, and that a Focus mode isn't silencing it. A time must also be selected in the app.</p>
+
+<h3>How do I delete my account and cloud data?</h3>
+<p>Settings → Delete account and cloud data. This immediately and permanently deletes all cloud records and the account itself; it cannot be undone. Local data is cleared by deleting the app.</p>
+
+<h3>Can I get a refund?</h3>
+<p>App Store refunds are handled by Apple; I have no access to them. Please file at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+<h2>Reporting a problem</h2>
+<p>Including the app version, your iOS version, and the steps that led to it makes this much faster. A screenshot helps most.</p>
+
+<h2>Privacy</h2>
+<p>What is collected, where it is stored, and how to delete it is all in the <a href="./">privacy policy</a>.</p>
+
+<footer>
+  50計畫 · Project 50 — Support · Andy Tsai
+</footer>
+</section>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.lang button');
+    var sections = { zh: document.getElementById('zh'), en: document.getElementById('en') };
+    function show(lang) {
+      sections.zh.hidden = lang !== 'zh';
+      sections.en.hidden = lang !== 'en';
+      document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant';
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+      document.title = lang === 'en' ? 'Support — Project 50' : '支援 — 50計畫';
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.lang); }); });
+    if (!/^zh/i.test(navigator.language || '')) show('en');
+  })();
+</script>
+
+</div>
+</body>
+</html>
